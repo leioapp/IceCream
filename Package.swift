@@ -20,7 +20,10 @@ let package = Package(
     targets: [
         .target(
             name: "IceCream",
-            dependencies: ["realm-swift"],
+            dependencies: [
+                .product(name: "RealmSwift", package: "realm-swift"),
+                .product(name: "Realm", package: "realm-swift")
+            ],
             path: "IceCream",
             sources: ["Classes"])
     ],
